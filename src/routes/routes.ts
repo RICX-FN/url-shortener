@@ -10,6 +10,6 @@ const linkService = new LinkService(linkRepository);
 const linkController = new LinkController(linkService);
 
 router.post("/shorten", (req, res) => linkController.handleShorten(req, res));
-// router.get("/:code", (req, res) => linkController.handleRedirect(req, res));
+router.get("/:code", (req, res) => linkController.handleRedirect(req, res));
 
 export { router };

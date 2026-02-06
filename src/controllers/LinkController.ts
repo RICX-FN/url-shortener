@@ -13,4 +13,14 @@ export class LinkController {
       return res.status(400).json({ error: "Erro ao encurtar URL" });
     }
   }
+
+  async handleRedirect(req: Request<{ code: string }>, res: Response) {
+    const { code } = req.params;
+    try {
+      const originalUrl = await this.linkService.getOriginalUrl(code);
+      res.redirect(originalUrl);
+    } catch (error) {
+      return res.status(404).json({ message: "URL não encontrada" });
+    }
+  }
 }

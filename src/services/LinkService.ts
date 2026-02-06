@@ -11,4 +11,14 @@ export class LinkService {
 
     return await this.linkRepository.create(originalUrl, shortCode);
   }
+
+  async getOriginalUrl(code: string) {
+    const linkOriginal = await this.linkRepository.findByCode(code)
+
+    if (!linkOriginal) {
+      throw new Error("Link não encontrado");
+    }
+
+    return linkOriginal.originalUrl;
+  }
 }

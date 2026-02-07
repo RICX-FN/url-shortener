@@ -6,7 +6,7 @@ import { router } from "./routes/routes.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT: number = Number(process.env.PORT) || 3000;
 
 app.use(
   cors({
@@ -18,6 +18,6 @@ app.use(
 app.use(express.json());
 app.use(router);
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server rodando na porta ${PORT}`);
 });

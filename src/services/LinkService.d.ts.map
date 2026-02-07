@@ -1,0 +1,1 @@
+{"version":3,"file":"LinkService.d.ts","sourceRoot":"","sources":["LinkService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,mCAAmC,CAAC;AAEnE,qBAAa,WAAW;IACV,OAAO,CAAC,cAAc;gBAAd,cAAc,EAAE,cAAc;IAE5C,UAAU,CAAC,WAAW,EAAE,MAAM;;;;;;;IAS9B,cAAc,CAAC,IAAI,EAAE,MAAM;CASlC"}
